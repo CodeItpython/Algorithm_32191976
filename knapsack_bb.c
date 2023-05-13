@@ -1,7 +1,12 @@
 #include <stdio.h>
 
 int n, W, maxprofit;
+//w[100]은 항목의 weight를 저장하는 배열
+//p[100]은 아이템의 profit을 나타내는 배열
+//x[100]은 선택한 항목을 나타내는 정수배열
+//bestx[100]은 찾은 최상의 솔루션을 나타내는 배열
 int w[100], p[100], x[100], bestx[100];
+
 
 void knapsack_bb(int i, int weight, int profit) {
     if (weight <= W && profit > maxprofit) {

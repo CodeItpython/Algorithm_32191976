@@ -1,13 +1,12 @@
-// 0-1 knapsack 문제를 backtracking과 branch-and-bound 기법으로 구현할 것.
-// - C언어를 사용하여 구현
-// - 3가지 이상의 입력 데이터로 테스트한 결과를 분석
-// - 주요 자료구조와 알고리즘을 구체적으로 설명
-// - 소스 파일은 보고서와 별도로 제출 (GitHib 링크 제출 가능)#include <stdio.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 int n, W, maxprofit;  // 품목 수, 배낭 용량 및 최대 이익을 저장하기 위한 변수
-int w[100], p[100], x[100], bestx[100];  // weight, profit, selected item 및 best solution을 저장하는 배열
+//w[100]은 항목의 weight를 저장하는 배열
+//p[100]은 아이템의 profit을 나타내는 배열
+//x[100]은 선택한 항목을 나타내는 정수배열
+//bestx[100]은 찾은 최상의 솔루션을 나타내는 배열
+int w[100], p[100], x[100], bestx[100];  
+
 void knapsack_bt(int i)
 {
     if(i > n)  //모든 항목 고려
