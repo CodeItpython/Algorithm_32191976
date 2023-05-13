@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int n, W, maxprofit;  // 품목 수, 배낭 용량 및 최대 이익을 저장하기 위한 변수
+int n, W, maxprofit;  //아이템, 용량 및 최대 이익을 저장하기 위한 변수
 //w[100]은 항목의 weight를 저장하는 배열
 //p[100]은 아이템의 profit을 나타내는 배열
 //x[100]은 선택한 항목을 나타내는 정수배열
