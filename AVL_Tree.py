@@ -166,16 +166,19 @@ class AVLTree:
 if __name__ == "__main__":
     avl_tree = AVLTree()
 
-    # key삽입
-    avl_tree.insert(10)
-    avl_tree.insert(5)
-    avl_tree.insert(15)
-    avl_tree.insert(3)
-    avl_tree.insert(7)
-    avl_tree.insert(12)
+    #key 삽입
+    avl_tree.insert(50)
+    avl_tree.insert(70)
+    avl_tree.insert(90)
+    #90까지 삽입된 부분에서 불균형이되므로 회전을 실행
+    avl_tree.insert(20)
+    avl_tree.insert(60)
+    avl_tree.insert(30)
+    #30이 삽입된순간 불균형이 되므로 회전실행
+
 
     # key 검색
-    key_to_search = 7
+    key_to_search = 30
     result = avl_tree.search(key_to_search)
     if result:
         print("Key {} is found".format(key_to_search))
@@ -183,7 +186,18 @@ if __name__ == "__main__":
         print("Key {} is not found".format(key_to_search))
 
     # key 삭제
-    key_to_delete = 5
+    key_to_delete = 20
+    avl_tree.delete(key_to_delete)
+    print("Key {} has been deleted".format(key_to_delete))
+
+    #key삽입
+    avl_tree.insert(10)
+    avl_tree.insert(55)
+    avl_tree.insert(65)
+
+    #key 삭제
+    key_to_delete = 30
+    #30을 삭제한순간 불균형 트리가 되어 균형을 맞춤
     avl_tree.delete(key_to_delete)
     print("Key {} has been deleted".format(key_to_delete))
 
